@@ -1,4 +1,5 @@
-import { Buttons, Button } from "./FeedbackOptions.styled";
+import { Buttons, Button } from './FeedbackOptions.styled';
+import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ onClick }) => {
   return (
@@ -17,4 +18,8 @@ export const FeedbackOptions = ({ onClick }) => {
       </Buttons>
     </div>
   );
+};
+
+FeedbackOptions.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };

@@ -1,4 +1,5 @@
-import { Section } from "../Section/Section";
+import { Section } from '../Section/Section';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ good, neutral, bad, positive, total }) => {
   return (
@@ -11,4 +12,12 @@ export const Statistics = ({ good, neutral, bad, positive, total }) => {
       <Section title="Positive:">{positive}%</Section>
     </div>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  positive: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
 };
